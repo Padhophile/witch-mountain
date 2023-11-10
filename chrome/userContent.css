@@ -1,0 +1,9 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  body {
+	background: url("wallpaper.jpg")!important;
+	background-size: cover !important;
+ }
+ .icon{
+	display: none !important;	
+ }
+}

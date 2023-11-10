@@ -1,0 +1,88 @@
+:root{
+	--primary: #1a1e1d;
+	--secondary: #1f2729;
+	--accent: #536363;
+	--thin-tab-width: 30px;
+	--wide-tab-width: 256px;
+/* 	--lwt-brighttext-url-color: #cd7420 !important; */
+	--lwt-brighttext-url-color: #cf9155 !important;	
+	--link-color: #cf9155 !important;
+}
+#nav-bar{
+	background: var(--primary) !important;
+}
+#urlbar[breakout]{
+	--urlbar-height: 34px !important;
+  top: 0 !important;
+}
+#urlbar-background{
+	transition: ease-in-out 200ms !important;
+	outline: none!important;
+	background: var(--secondary) !important;
+}
+#urlbar:focus-within> #urlbar-background{
+  
+	background: #1c2122 !important;
+/* 	opacity: 0.96;
+	filter: blur(8px); */
+}
+.urlbarView-row[selected]{
+	background: var(--secondary) !important;
+}
+.urlbarView-row[row-selectable]:not([selected]):hover{
+	background: var(--accent) !important;
+	color: white !important;
+}
+.urlbarView-row[row-selectable]:not([selected]):hover .urlbarView-url{
+	color:  #b4ada5 !important;
+}
+toolbarbutton{
+	--toolbarbutton-hover-background: var(--accent) !important;
+}
+#star-button{
+	fill: #5fa2a2 !important;
+}
+/* Hide main tabs toolbar */
+#TabsToolbar {
+	display: none !important;
+}
+#titlebar{
+	display: none !important;
+}
+/* Sidebar min and max width removal */
+
+/* Hide splitter, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+	display: none !important;
+}
+/* Hide sidebar header, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+	visibility: collapse;
+}
+
+/* Shrink sidebar until hovered, when using Tree Style Tab. */
+ #sidebar-box{
+	position: relative !important;
+	width: var(--thin-tab-width) !important;
+	transition: ease-in 150ms !important;
+	min-width: var(--thin-tab-width) !important;
+	max-width: none !important;
+	z-index: 1 !important;
+}
+ #sidebar-box:hover{
+	width: var(--wide-tab-width) !important;
+	margin-right: -226px !important; /*--thin-tab-width minus --wide-tab-width*/
+	transition: ease-in-out 250ms !important;
+}
+panelview{
+	--arrowpanel-background: var(--primary) !important;
+}
+.panel-header{
+	background: var(--secondary) !important;
+}
+arrowscrollbox{
+	background: var(--primary) !important;
+}
+menuitem:hover{
+	background: var(--accent) !important;
+}
